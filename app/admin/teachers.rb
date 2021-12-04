@@ -14,4 +14,18 @@ ActiveAdmin.register Teacher do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :age
+      f.input :grade
+      f.input :qualification
+      f.input :address
+      br
+      f.input :gender, as: :select, collection: Teacher.genders.collect { |status,id| [status.humanize,id] }
+      end
+    f.actions
+  end
+
 end

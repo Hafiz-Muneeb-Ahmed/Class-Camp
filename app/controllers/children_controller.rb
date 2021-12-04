@@ -25,7 +25,6 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       @child.parent_id = current_parent.id
-      byebug
       if @child.save
         format.html { redirect_to @child, notice: "Child was successfully created." }
         format.json { render :show, status: :created, location: @child }
