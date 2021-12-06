@@ -21,6 +21,7 @@ ActiveAdmin.register Teacher do
       f.input :age
       f.input :grade
       f.input :qualification
+      f.input :bio
       f.input :address
       br
       f.input :gender, as: :select, collection: Teacher.genders.collect { |status,id| [status.humanize,id] }
