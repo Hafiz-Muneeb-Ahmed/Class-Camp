@@ -1,6 +1,0 @@
-<% if current_parent %>
-  <%= link_to "Sign Out", destroy_parent_session_path, method: :delete %>
-<% else %>
-  <%= link_to "LogIn", new_parent_session_path %>
-  <%= link_to "Sign Up", new_parent_registration_path %>
-<% end %>
