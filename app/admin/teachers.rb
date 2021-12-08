@@ -5,7 +5,7 @@ ActiveAdmin.register Teacher do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :address, :qualification, :grade, :age, :gender
+  permit_params :name, :address, :qualification, :grade, :age, :gender, :bio
   #
   # or
   #
