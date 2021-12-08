@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :parents
   root to: 'pods#index'
-  get '/pods', to: 'pods#index'
+  resources :pods, only: [:index]
   resources :teachers, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
