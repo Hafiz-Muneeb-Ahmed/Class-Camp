@@ -1,0 +1,19 @@
+<%= search_form_for @q do |f| %>
+  <%= f.search_field :name_cont,placeholder: "Search Teachers..." %>
+  <%= f.select :grade_cont, Teacher.grades.collect { |status,id| [status,id] } %>
+  <%= f.submit %>
+<% end %>
+<ol>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Grade</th>
+  </tr>
+<% @pods.each do |t|%>
+  <tr>
+    <td><%= t.name %></td>
+    <td><%= t.grade %></td>
+  </tr>
+<%end%>
+</table>
+</ol>
