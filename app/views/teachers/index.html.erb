@@ -1,6 +1,6 @@
 <%= search_form_for @q do |f| %>
   <%= f.search_field :name_cont,placeholder: "Search Teachers..." %>
-  <%= f.select :grade_cont, Teacher.grades.collect { |status,id| [status,id] } %>
+  <%= f.select :grade_cont, Teacher.grades.collect { |status,id| [status.humanize,id] } %>
   <%= f.submit %>
 <% end %>
 <ol>
