@@ -1,5 +1,7 @@
 class Child < ApplicationRecord
   belongs_to :parent
+  has_many :pod_requests
+  has_many :pods, through: :pod_requests
   enum gender: { 'Male' => "male", 'Female' => "female" }
   validates :name, :age, :grade, presence: true
   validates_length_of :address, minimum: 4, maximum: 100, allow_blank: false
