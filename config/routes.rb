@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   root to: 'pods#index'
   resources :pods, only: [:index]
   resources :teachers, only: [:index]
+  resources :pod_requests, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

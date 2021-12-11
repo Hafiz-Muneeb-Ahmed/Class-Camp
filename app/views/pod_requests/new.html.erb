@@ -1,0 +1,19 @@
+<h1><%= @pod.name%></h1>
+<%= form_for @pod_request do |f| %>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Grade</th>
+    <th>Select</th>
+  </tr>
+  <tr>
+  <% current_parent.children.each do |c|%>
+      <td><%=c.name%></td>
+      <td><%=c.grade%></td>
+      <td><%= check_box_tag("children_ids[]", c.id) %></td>
+    </tr>
+  <% end %>
+  </table>
+  <%= f.hidden_field :pod_id, value: @pod.id %>
+  <%= f.submit "Send Request" %>
+<% end %>

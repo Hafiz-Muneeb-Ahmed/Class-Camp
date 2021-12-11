@@ -4,6 +4,6 @@
 <% end %>
 <ol>
 <% @pods.each do |p|%>
-  <li><%= p.name %><%= button_to "Apply" %></li>
+  <li><%= p.name %><%= link_to " Apply" ,new_pod_request_path(id: p.id)%></li>
 <%end%>
 </ol>
