@@ -1,0 +1,11 @@
+<p>Mr./Mrs. <%= @parent %> has requested for<b> <%= @pod.name %></b></p>
+
+<p>
+ Children details:
+  <% @children.each do |c|%>
+    <li>
+    <b><%= c.name %></b>
+    </li>
+  <% end %>
+  <%= link_to "Click here to check the status", admin_pod_requests_url %>
+</p>
